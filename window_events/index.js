@@ -17,7 +17,7 @@ window.addEventListener('focus', () => console.log('Page is active.'));
 
 window.addEventListener('blur', () => console.log('Page is passive.'));
 
-// window.addEventListener('DOMContentLoaded', () => console.log('DOM has been loaded.'));
+window.addEventListener('error', (event) => console.log(`Error: ${event.message} on ${event.filename} in line ${event.lineno}.`));
 
 // window.addEventListener('DOMContentLoaded', () => console.log('DOM has been loaded.'));
 

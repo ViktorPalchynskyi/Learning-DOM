@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <a id="link" href="https://example.com" target="_blank">Link example</a>
+        <button id="btn">Change attribute</button>
+    </body>
+    <script>
+        const link = document.getElementById('link');
+        const btn = document.getElementById('btn');
+
+        const secondLink = link.cloneNode(true);
+        link.setAttribute('data-value', Math.round(Math.random() * 1000).toString());
+
+        btn.addEventListener('click', () => {
+            link.innerText = link.getAttribute('href');
+            secondLink.setAttribute('href', 'https://github.com/ViktorPalchynskyi/Learning-DOM');
+            document.body.append(secondLink);
+
+            if (link.hasAttribute('data-value')) {
+                const value = link.getAttribute('data-value');
+                alert(value);
+
+                if (value < 100) {
+                    link.removeAttribute('data-value');
+                    alert('data-value was removed.');
+                }
+            }
+        });
+    </script>
+</html>

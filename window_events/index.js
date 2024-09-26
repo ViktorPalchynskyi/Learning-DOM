@@ -13,9 +13,9 @@ window.addEventListener('beforeunload', (event) => {
 
 window.addEventListener('unload', () => console.log('Page has been unloaded.'));
 
-// window.addEventListener('focus', () => console.log('Page is active.'));
+window.addEventListener('focus', () => console.log('Page is active.'));
 
-// window.addEventListener('blur', () => console.log('Page is passive.'));
+window.addEventListener('blur', () => console.log('Page is passive.'));
 
 // window.addEventListener('DOMContentLoaded', () => console.log('DOM has been loaded.'));
 

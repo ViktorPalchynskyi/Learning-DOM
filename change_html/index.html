@@ -6,7 +6,9 @@
         <title>Document</title>
     </head>
     <body>
-        <div id="example">Old text</div>
+        <!-- <div id="example">Old text</div>
+        <button id="btn">Change text</button> -->
+        <div id="example">Old <i>HTML</i></div>
         <button id="btn">Change text</button>
     </body>
     <script>
@@ -14,7 +16,8 @@
         const btn = document.getElementById('btn');
 
         btn.addEventListener('click', () => {
-            elem.textContent = 'New text';
+            // elem.textContent = 'New text';
+            elem.innerHTML = '<b>New HTML</b>'
         });
     </script>
 </html>

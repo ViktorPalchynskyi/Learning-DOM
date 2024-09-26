@@ -19,6 +19,6 @@ window.addEventListener('blur', () => console.log('Page is passive.'));
 
 window.addEventListener('error', (event) => console.log(`Error: ${event.message} on ${event.filename} in line ${event.lineno}.`));
 
-// window.addEventListener('DOMContentLoaded', () => console.log('DOM has been loaded.'));
+window.addEventListener('online', () => console.log('Connection restored.'));
 
-// window.addEventListener('DOMContentLoaded', () => console.log('DOM has been loaded.'));
+window.addEventListener('offline', () => console.log('Connection was been lost.'));

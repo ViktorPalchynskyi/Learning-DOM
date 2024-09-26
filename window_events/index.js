@@ -6,10 +6,10 @@ window.addEventListener('resize', () => console.log(`Windw's size has been chang
 
 window.addEventListener('scroll', () => console.log(`Scrilled to ${window.screenY} pixels.`));
 
-// window.addEventListener('beforeunload', (event) => {
-//     event.preventDefault();
-//     console.log('beforeunload');
-// });
+window.addEventListener('beforeunload', (event) => {
+    event.preventDefault();
+    console.log('beforeunload');
+});
 
 // window.addEventListener('unload', () => console.log('Page has been unloaded.'));
 

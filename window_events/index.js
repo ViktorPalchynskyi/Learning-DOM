@@ -11,7 +11,7 @@ window.addEventListener('beforeunload', (event) => {
     console.log('beforeunload');
 });
 
-// window.addEventListener('unload', () => console.log('Page has been unloaded.'));
+window.addEventListener('unload', () => console.log('Page has been unloaded.'));
 
 // window.addEventListener('focus', () => console.log('Page is active.'));
 

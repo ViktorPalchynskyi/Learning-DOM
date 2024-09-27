@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="btn">Click me</button>
+    </body>
+    <script>
+        const btn = document.getElementById('btn');
+        const customEvent = new CustomEvent('custom', {
+            detail: { info: 'I`m custom event' },
+        });
+
+        btn.addEventListener('click', () => {
+            console.log('Hello there');
+            document.dispatchEvent(customEvent);
+        });
+
+        document.addEventListener('custom', (e) => console.log(e.detail.info));
+    </script>
+</html>

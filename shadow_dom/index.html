@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            p {
+                color: coral;
+                background-color: teal;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This is DOM</p>
+        <my-component></my-component>
+    </body>
+    <script>
+        class MyComponent extends HTMLElement {
+            constructor() {
+                super();
+                const shadowRoot = this.attachShadow({ mode: 'open' });
+
+                shadowRoot.innerHTML = `
+                <style>
+                    p {
+                        color: tomato;
+                        font-weight: bold;
+                        background-color: skyblue;
+                    }    
+                </style>
+                <p>This is Shadow DOM</p>
+            `;
+            }
+        }
+
+        customElements.define('my-component', MyComponent);
+    </script>
+</html>
